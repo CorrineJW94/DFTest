@@ -14,16 +14,12 @@ namespace DirectFerriesTest.Tests.Services
     {
 
         private Mock<ILogger<ProductService>> _mockProductLogger;
-        private Mock<HttpMessageHandler> _httpMessageHandlerMock;
         private Mock<IRequestService> _mockRequestService;
         private IProductService _productService;
 
         [SetUp]
         public void Setup()
         {
-            // mock httpmessagehander to inject into HttpClient
-            _httpMessageHandlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
-
             // mock the logger
             _mockProductLogger = new Mock<ILogger<ProductService>>();
 
